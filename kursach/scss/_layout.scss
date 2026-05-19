@@ -1,0 +1,454 @@
+// ============================================
+// GETGO - LAYOUT
+// ============================================
+
+// Header - Sticky 80px
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $spacing-xl;
+    background: $primary-black;
+    border-bottom: 1px solid $primary-green;
+    flex-wrap: wrap;
+    height: $header-height;
+    position: sticky;
+    top: 0;
+    z-index: $z-header;
+    
+    @include mobile {
+        padding: 0 $spacing-md;
+        height: $header-height-mobile;
+    }
+}
+
+.logo {
+    font-size: $font-size-3xl;
+    font-weight: $font-extrabold;
+    letter-spacing: -0.5px;
+    color: $primary-green;
+}
+
+.nav-links {
+    display: flex;
+    gap: $spacing-xl;
+    font-weight: $font-medium;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    @include mobile {
+        justify-content: center;
+        gap: $spacing-md;
+    }
+    
+    a {
+        color: $white;
+        
+        &:hover {
+            color: $primary-green;
+        }
+    }
+}
+
+// Footer
+.footer {
+    background: $footer-bg;
+    color: $footer-text;
+    padding: $spacing-3xl $spacing-xl $spacing-lg;
+    border-top: 1px solid $primary-green;
+    
+    &-inner {
+        max-width: $container-max;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: $spacing-2xl;
+    }
+    
+    &-logo {
+        font-size: $font-size-2xl;
+        font-weight: $font-extrabold;
+        color: $primary-green;
+        margin-bottom: $spacing-md;
+    }
+    
+    &-links {
+        display: flex;
+        gap: $spacing-4xl;
+        flex-wrap: wrap;
+        
+        div {
+            strong {
+                display: block;
+                margin-bottom: $spacing-md;
+                color: $white;
+            }
+            
+            a {
+                display: block;
+                color: $footer-link;
+                margin: $spacing-sm 0;
+                font-size: $font-size-sm;
+                
+                &:hover {
+                    color: $primary-green;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+    margin-top: $spacing-3xl;
+    padding-top: $spacing-lg;
+    border-top: 1px solid #2a2a2a;
+    font-size: $font-size-xs;
+    color: #888888;
+}
+
+// Grid Layouts
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-2xl;
+    justify-content: center;
+    margin: $spacing-5xl 0;
+}
+
+.reviews-grid {
+    @include grid-responsive(350px, $spacing-lg);
+    margin: $spacing-2xl 0;
+}
+
+.fleet-grid {
+    @include grid-responsive(320px, $spacing-lg);
+    padding: $spacing-5xl 0;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+    justify-content: center;
+    padding: $spacing-5xl 0;
+}
+
+.faq-grid {
+    @include grid-responsive(350px, $spacing-lg);
+    padding: $spacing-5xl 0;
+}
+
+.values-grid {
+    @include grid-responsive(250px, $spacing-lg);
+    margin-top: $spacing-2xl;
+}
+
+.team-grid {
+    @include grid-responsive(280px, $spacing-lg);
+    margin-top: $spacing-2xl;
+}
+
+.extras-grid {
+    @include grid-responsive(300px, $spacing-lg);
+    margin-top: $spacing-2xl;
+}
+
+.mission-grid {
+    @include grid-auto(2, $spacing-lg);
+}
+
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $spacing-lg;
+    margin-top: $spacing-2xl;
+}
+
+.load-more {
+    text-align: center;
+    margin: $spacing-2xl 0;
+}
+
+// Hero Sections
+.hero {
+    @include gradient-hero;
+    padding: $spacing-5xl $spacing-lg $spacing-6xl;
+    text-align: center;
+    
+    h1 {
+        @include heading-1;
+        @include text-gradient;
+        margin-bottom: $spacing-lg;
+    }
+    
+    p {
+        font-size: $font-size-lg;
+        color: $gray-text;
+        max-width: 600px;
+        margin: 0 auto $spacing-lg;
+    }
+}
+
+.about-hero {
+    @include gradient-about;
+    color: $white;
+    padding: $spacing-6xl 0;
+    text-align: center;
+    
+    h1 {
+        font-size: $font-size-6xl;
+        margin-bottom: $spacing-md;
+        
+        @include mobile {
+            font-size: $font-size-5xl;
+        }
+    }
+    
+    p {
+        font-size: $font-size-lg;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0.9;
+        color: #cccccc;
+    }
+}
+
+.fleet-hero {
+    @include gradient-fleet;
+    color: $white;
+    padding: $spacing-5xl 0;
+    text-align: center;
+    
+    h1 {
+        font-size: $font-size-6xl;
+        margin-bottom: $spacing-md;
+        color: $primary-green;
+    }
+    
+    p {
+        color: #cccccc;
+    }
+}
+
+.pricing-hero {
+    background: linear-gradient(135deg, $gray-bg 0%, $white 100%);
+    padding: $spacing-5xl 0;
+    text-align: center;
+}
+
+.reviews-hero {
+    background: $gray-bg;
+    padding: $spacing-5xl 0;
+    text-align: center;
+}
+
+.faq-hero {
+    background: $white;
+    padding: $spacing-5xl 0 $spacing-2xl;
+    text-align: center;
+    border-bottom: 1px solid $gray-border;
+}
+
+// Sections
+.mission-section {
+    padding: $spacing-5xl 0;
+    background: $gray-bg;
+}
+
+.values-section {
+    padding: $spacing-5xl 0;
+    background: $white;
+}
+
+.milestones {
+    background: linear-gradient(135deg, $gray-bg 0%, $white 100%);
+    padding: $spacing-5xl 0;
+}
+
+.team-section {
+    padding: $spacing-5xl 0;
+    background: $gray-bg;
+}
+
+.extras-section {
+    background: $gray-bg;
+    padding: $spacing-5xl 0;
+}
+
+// Rating Summary
+.rating-summary {
+    margin-bottom: $spacing-3xl;
+    
+    .big-rating {
+        font-size: $font-size-7xl;
+        font-weight: $font-extrabold;
+        color: $primary-green;
+    }
+    
+    .stars svg {
+        fill: $primary-green;
+    }
+    
+    p {
+        color: $gray-light;
+    }
+}
+
+// CTA Section
+.cta-section {
+    background: linear-gradient(105deg, $gray-bg 0%, $white 100%);
+    text-align: center;
+    padding: $spacing-4xl $spacing-lg;
+    border: 1px solid $primary-green;
+    border-radius: $radius-3xl;
+    margin: $spacing-2xl auto;
+    max-width: 1200px;
+    
+    h3 {
+        font-size: $font-size-4xl;
+        font-weight: $font-extrabold;
+        color: $primary-black;
+        
+        @include mobile {
+            font-size: $font-size-3xl;
+        }
+    }
+    
+    p {
+        margin: $spacing-md 0;
+        color: $gray-text;
+    }
+}
+
+// Mobile Menu Button
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-sm;
+    z-index: 1001;
+    
+    svg {
+        stroke: $primary-green;
+        stroke-width: 2.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+        gap: $spacing-md;
+        padding: $spacing-lg 0;
+        background: $primary-black;
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        border-bottom: 1px solid $primary-green;
+        
+        &.active {
+            display: flex !important;
+        }
+        
+        a {
+            color: $white;
+            padding: $spacing-sm $spacing-lg;
+            
+            &:hover {
+                color: $primary-green;
+            }
+        }
+    }
+    
+    .navbar {
+        position: sticky;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none !important;
+    }
+}
+// Reviews Hero - убираем inline-styles
+.reviews-hero {
+    background: $gray-bg;
+    padding: $spacing-5xl 0;
+    text-align: center;
+}
+
+// FAQ Hero
+.faq-hero {
+    background: $white;
+    padding: $spacing-5xl 0 $spacing-2xl;
+    text-align: center;
+    border-bottom: 1px solid $gray-border;
+}
+// ========== HERO WITH ROTATING CAR IMAGE ==========
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.hero-car-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    transform: perspective(1000px) rotateY(-10deg);
+    cursor: pointer;
+}
+
+.hero-car-image:hover {
+    transform: perspective(1000px) rotateY(10deg);
+}
+
+/* Hero wrapper для двух колонок */
+.hero-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-car-image {
+        transform: perspective(1000px) rotateY(-5deg);
+        max-width: 90%;
+    }
+    
+    .hero-car-image:hover {
+        transform: perspective(1000px) rotateY(5deg);
+    }
+}

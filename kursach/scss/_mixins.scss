@@ -1,0 +1,245 @@
+// ============================================
+// GETGO - MIXINS
+// ============================================
+
+// Media Queries
+@mixin mobile {
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+// Flexbox
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Grid
+@mixin grid-responsive($min-width: 280px, $gap: $spacing-lg) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+    gap: $gap;
+}
+
+@mixin grid-auto($columns: 3, $gap: $spacing-lg) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+    
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Typography
+@mixin heading-1 {
+    font-size: $font-size-7xl;
+    font-weight: $font-extrabold;
+    letter-spacing: -1px;
+    line-height: $line-height-tight;
+    
+    @include mobile {
+        font-size: $font-size-5xl;
+    }
+}
+
+@mixin heading-2 {
+    font-size: $font-size-5xl;
+    font-weight: $font-extrabold;
+    letter-spacing: -0.3px;
+    
+    @include mobile {
+        font-size: $font-size-4xl;
+    }
+}
+
+@mixin heading-3 {
+    font-size: $font-size-2xl;
+    font-weight: $font-bold;
+}
+
+@mixin text-gradient {
+    background: linear-gradient(135deg, $primary-black 0%, $primary-green 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+// Buttons
+@mixin button-primary {
+    background: $primary-green;
+    color: $primary-black;
+    padding: 14px 36px;
+    font-size: $font-size-md;
+    font-weight: $font-semibold;
+    border-radius: $radius-full;
+    transition: $transition-fast;
+    box-shadow: $shadow-md;
+    cursor: pointer;
+    border: none;
+    
+    &:hover {
+        background: $primary-green-dark;
+        transform: translateY(-2px);
+    }
+}
+
+@mixin button-secondary {
+    background: transparent;
+    border: 1px solid $primary-green;
+    padding: $spacing-md $spacing-xl;
+    border-radius: $radius-full;
+    font-weight: $font-bold;
+    cursor: pointer;
+    transition: $transition-fast;
+    color: $primary-black;
+    
+    &:hover {
+        background: $primary-green;
+        color: $primary-black;
+    }
+}
+
+@mixin button-outline {
+    background: transparent;
+    border: 2px solid $primary-green;
+    padding: $spacing-md;
+    width: 100%;
+    border-radius: $radius-full;
+    font-weight: $font-bold;
+    cursor: pointer;
+    transition: $transition-fast;
+    color: $primary-black;
+    
+    &:hover {
+        background: $primary-green;
+        color: $primary-black;
+    }
+}
+
+// Cards
+@mixin card {
+    background: $white;
+    border-radius: $radius-2xl;
+    box-shadow: $shadow-xl;
+    border: 1px solid $gray-border;
+    transition: $transition-fast;
+    
+    &:hover {
+        transform: translateY(-4px);
+        border-color: $primary-green;
+    }
+}
+
+@mixin review-card {
+    background: $white;
+    border-radius: $radius-2xl;
+    padding: $spacing-lg;
+    box-shadow: $shadow-md;
+    border: 1px solid $gray-border;
+}
+
+@mixin car-card {
+    background: $white;
+    border-radius: $radius-2xl;
+    box-shadow: $shadow-xl;
+    border: 1px solid $gray-border;
+    transition: $transition-fast;
+    overflow: hidden;
+    
+    &:hover {
+        transform: translateY(-4px);
+        border-color: $primary-green;
+    }
+}
+
+// Container
+@mixin container {
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+    
+    @include mobile {
+        padding: 0 $container-padding-mobile;
+    }
+}
+
+// Gradient Backgrounds
+@mixin gradient-hero {
+    background: $gray-bg;
+}
+
+@mixin gradient-about {
+    background: linear-gradient(135deg, $about-hero-start 0%, $about-hero-end 100%);
+}
+
+@mixin gradient-fleet {
+    background: linear-gradient(145deg, $fleet-hero-start 0%, $fleet-hero-end 100%);
+}
+
+// Animations
+@mixin fade-in {
+    animation: fadeIn 0.3s ease;
+}
+
+@mixin slide-in {
+    animation: slideIn 0.3s ease;
+}
+
+// Keyframes
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}

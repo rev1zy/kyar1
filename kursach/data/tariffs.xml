@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs>
+    <tariff id="1" popular="false">
+        <name>Почасовой</name>
+        <price>29.9</price>
+        <period>руб/час</period>
+        <features>
+            <feature>Бензин включен</feature>
+            <feature>Страховка</feature>
+            <feature>150 км/день</feature>
+        </features>
+    </tariff>
+    <tariff id="2" popular="true">
+        <name>Дневной</name>
+        <price>179</price>
+        <period>руб/сутки</period>
+        <features>
+            <feature>Безлимит км</feature>
+            <feature>Premium поддержка</feature>
+            <feature>Бесплатная отмена</feature>
+        </features>
+    </tariff>
+    <tariff id="3" popular="false">
+        <name>Выходной+</name>
+        <price>449</price>
+        <period>руб/3 дня</period>
+        <features>
+            <feature>Полный бак</feature>
+            <feature>Доп. водитель</feature>
+            <feature>Любой класс авто</feature>
+        </features>
+    </tariff>
+</tariffs>

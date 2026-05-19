@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews>
+    <review id="1">
+        <name>Сара Джонсон</name>
+        <date>10 марта 2026</date>
+        <car>Tesla Model 3</car>
+        <stars>5</stars>
+        <text>Потрясающий сервис! Машины всегда чистые, а приложение очень удобное. Пользуюсь GetGo уже 6 месяцев и очень довольна.</text>
+        <helpful>24</helpful>
+    </review>
+    <review id="2">
+        <name>Михаил Чен</name>
+        <date>18 марта 2026</date>
+        <car>Honda CR-V</car>
+        <stars>5</stars>
+        <text>Лучший каршеринг, которым я пользовался. Отличный выбор автомобилей и конкурентные цены.</text>
+        <helpful>18</helpful>
+    </review>
+    <review id="3">
+        <name>Елена Родригес</name>
+        <date>15 марта 2026</date>
+        <car>Toyota Camry</car>
+        <stars>5</stars>
+        <text>Очень удобно для поездок по городу. Единственная проблема — иногда сложно найти парковку.</text>
+        <helpful>12</helpful>
+    </review>
+    <review id="4">
+        <name>Дэвид Пак</name>
+        <date>12 марта 2026</date>
+        <car>Honda Civic</car>
+        <stars>5</stars>
+        <text>Отличное соотношение цены и качества. Больше никаких страховок, обслуживания и парковок.</text>
+        <helpful>31</helpful>
+    </review>
+    <review id="5">
+        <name>Джессика Ли</name>
+        <date>10 марта 2026</date>
+        <car>BMW 3 Series</car>
+        <stars>5</stars>
+        <text>Обожаю разнообразие доступных автомобилей. Гибкость просто невероятна!</text>
+        <helpful>15</helpful>
+    </review>
+    <review id="6">
+        <name>Роберт Мартинес</name>
+        <date>8 марта 2026</date>
+        <car>Mini Cooper</car>
+        <stars>5</stars>
+        <text>Отличный сервис. Была проблема с открытием машины, но поддержка решила её быстро.</text>
+        <helpful>9</helpful>
+    </review>
+    <review id="7">
+        <name>Аманда Уайт</name>
+        <date>5 марта 2026</date>
+        <car>Nissan Leaf</car>
+        <stars>5</stars>
+        <text>Идеально для тех, кто не ездит каждый день. Сэкономила тысячи!</text>
+        <helpful>27</helpful>
+    </review>
+    <review id="8">
+        <name>Джеймс Уилсон</name>
+        <date>3 марта 2026</date>
+        <car>Tesla Model 3</car>
+        <stars>5</stars>
+        <text>Электромобили — это фантастика. Приложение работает безупречно.</text>
+        <helpful>22</helpful>
+    </review>
+</reviews>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>GetGo | Отзывы клиентов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="page1-home.html" class="logo">GetGo</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg width="30" height="21" viewBox="0 0 30 21" fill="none">
+                    <line x1="2" y1="2" x2="28" y2="2" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="2" y1="10.5" x2="28" y2="10.5" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="2" y1="19" x2="28" y2="19" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="page1-home.html">Главная</a>
+                <a href="page2-about.html">О нас</a>
+                <a href="page6-pricing.html">Тарифы</a>
+                <a href="page3-fleet.html">Автопарк</a>
+                <a href="page4-reviews.html">Отзывы</a>
+                <a href="page5-faq.html">Вопросы</a>
+                <a href="#" class="btn-signup" id="signupBtn">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <h2 id="modalTitle">Создайте аккаунт</h2>
+            <p class="modal-subtitle" id="modalSubtitle">Начните использовать GetGo уже сегодня</p>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" id="userName" placeholder="Иван" required>
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="tel" id="userPhone" placeholder="+375 29 123-45-67" required>
+                </div>
+                <div class="form-group">
+                    <label>Комментарий</label>
+                    <textarea id="userComment" rows="3" placeholder="Ваш комментарий или вопрос..."></textarea>
+                </div>
+                <button type="submit" class="btn-register">Зарегистрироваться →</button>
+            </form>
+        </div>
+    </div>
+
+    <main id="mainContent">
+        <section class="reviews-hero">
+            <div class="container">
+                <div class="rating-summary">
+                    <div class="big-rating">4.8</div>
+                    <div class="stars">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="#f5b042"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="#f5b042"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="#f5b042"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="#f5b042"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="#f5b042"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p>На основе 3 847 отзывов</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="reviews-grid" id="reviewsContainer"></div>
+            <div class="load-more">
+                <button class="btn-cta" id="loadMoreBtn">Загрузить ещё отзывы</button>
+            </div>
+        </div>
+
+        <div class="cta-banner">
+            <h3>Готов попробовать сам?</h3>
+            <p>Присоединяйтесь к тысячам довольных клиентов и начните свой путь с каршерингом уже сегодня</p>
+            <button class="btn-cta">Начать →</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <div class="footer-logo">GetGo</div>
+                <p>Современный каршеринг<br>для городской мобильности. Водите на своих условиях.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <strong>Навигация</strong>
+                    <a href="page2-about.html">О нас</a>
+                    <a href="page6-pricing.html">Тарифы</a>
+                    <a href="page3-fleet.html">Автопарк</a>
+                    <a href="page5-faq.html">Вопросы</a>
+                </div>
+                <div>
+                    <strong>Контакты</strong>
+                    <a href="#">+375 (29) 533-9559</a>
+                    <a href="#">kuzychenkoa@inbox.ru</a>
+                    <a href="#">город Минск, улица Бобруйская 25</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">© 2026 GetGo. Все права защищены.</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

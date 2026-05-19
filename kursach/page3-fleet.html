@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>GetGo | Автопарк</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="page1-home.html" class="logo">GetGo</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg width="30" height="21" viewBox="0 0 30 21" fill="none">
+                    <line x1="2" y1="2" x2="28" y2="2" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="2" y1="10.5" x2="28" y2="10.5" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="2" y1="19" x2="28" y2="19" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="page1-home.html">Главная</a>
+                <a href="page2-about.html">О нас</a>
+                <a href="page6-pricing.html">Тарифы</a>
+                <a href="page3-fleet.html">Автопарк</a>
+                <a href="page4-reviews.html">Отзывы</a>
+                <a href="page5-faq.html">Вопросы</a>
+                <a href="#" class="btn-signup" id="signupBtn">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Модальное окно регистрации/бронирования -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <h2 id="modalTitle">Забронировать автомобиль</h2>
+            <p class="modal-subtitle" id="modalSubtitle">Заполните форму, и мы свяжемся с вами</p>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" id="userName" placeholder="Иван" required>
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="tel" id="userPhone" placeholder="+375 29 123-45-67" required>
+                </div>
+                <div class="form-group">
+                    <label>Комментарий</label>
+                    <textarea id="userComment" rows="3" placeholder="Дополнительные пожелания..." ></textarea>
+                </div>
+                <button type="submit" class="btn-register">Отправить заявку →</button>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для характеристик автомобиля -->
+    <div class="specs-modal" id="specsModal">
+        <div class="specs-modal-content">
+            <button class="specs-modal-close" id="closeSpecsBtn">&times;</button>
+            <h2 id="specsCarName">Tesla Model 3</h2>
+            <div class="car-price-large" id="specsCarPrice">от 15 руб/час</div>
+            
+            <div class="specs-section">
+                <h3>⚡ Технические характеристики</h3>
+                <ul id="specsList">
+                    <li>Электромобиль</li>
+                    <li>Запас хода: 358 миль</li>
+                    <li>Разгон 0-100 км/ч: 3.3 сек</li>
+                </ul>
+            </div>
+            
+            <div class="specs-section">
+                <h3>🎯 Комплектация</h3>
+                <div id="featuresList">
+                    <span class="specs-badge">Автопилот</span>
+                    <span class="specs-badge">Панорамная крыша</span>
+                    <span class="specs-badge">Подогрев сидений</span>
+                </div>
+            </div>
+            
+            <div class="specs-section">
+                <h3>📋 Условия аренды</h3>
+                <ul>
+                    <li>Страховка КАСКО включена</li>
+                    <li>Безлимитный пробег (дневной тариф)</li>
+                    <li>Возврат в любую точку зоны покрытия</li>
+                    <li>Круглосуточная поддержка</li>
+                </ul>
+            </div>
+            
+            <button class="btn-book" id="bookFromSpecsBtn">Забронировать этот автомобиль →</button>
+        </div>
+    </div>
+
+    <main id="mainContent">
+        <section class="fleet-hero">
+            <div class="container">
+                <h1>Наш автопарк</h1>
+                <p>Выбирайте из нашего разнообразного парка хорошо обслуживаемых автомобилей: от компактных до люксовых седанов.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="fleet-grid" id="fleetGrid">
+                <!-- Автомобили будут загружены через JavaScript -->
+            </div>
+        </div>
+    </main>
+
+   <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <div class="footer-logo">GetGo</div>
+                <p>Современный каршеринг<br>для городской мобильности. Водите на своих условиях.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <strong>Навигация</strong>
+                    <a href="page2-about.html">О нас</a>
+                    <a href="page6-pricing.html">Тарифы</a>
+                    <a href="page3-fleet.html">Автопарк</a>
+                    <a href="page5-faq.html">Вопросы</a>
+                </div>
+                <div>
+                    <strong>Контакты</strong>
+                    <a href="#">+375 (29) 533-9559</a>
+                    <a href="#">kuzychenkoa@inbox.ru</a>
+                    <a href="#">город Минск,улица Бобруйская 25</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">© 2026 GetGo. Все права защищены.</div>
+    </footer>
+   <script src="js/script.js"></script>
+</body>
+</html>

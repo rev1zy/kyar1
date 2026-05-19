@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>GetGo | О нас - Наша миссия</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="page1-home.html" class="logo">GetGo</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg width="30" height="21" viewBox="0 0 30 21" fill="none">
+                    <line x1="2" y1="2" x2="28" y2="2" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="2" y1="10.5" x2="28" y2="10.5" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="2" y1="19" x2="28" y2="19" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="page1-home.html">Главная</a>
+                <a href="page2-about.html">О нас</a>
+                <a href="page6-pricing.html">Тарифы</a>
+                <a href="page3-fleet.html">Автопарк</a>
+                <a href="page4-reviews.html">Отзывы</a>
+                <a href="page5-faq.html">Вопросы</a>
+                <a href="#" class="btn-signup" id="signupBtn">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Модальное окно регистрации - ОБНОВЛЕНО с правильными ID -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <h2 id="modalTitle">Создайте аккаунт</h2>
+            <p class="modal-subtitle" id="modalSubtitle">Начните использовать GetGo уже сегодня</p>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" id="userName" placeholder="Иван" required>
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="tel" id="userPhone" placeholder="+375 29 123-45-67" required>
+                </div>
+                <div class="form-group">
+                    <label>Комментарий</label>
+                    <textarea id="userComment" rows="3" placeholder="Ваш комментарий или вопрос..."></textarea>
+                </div>
+                <button type="submit" class="btn-register">Зарегистрироваться →</button>
+                
+            </form>
+        </div>
+    </div>
+
+    <main id="mainContent">
+        <section class="about-hero">
+            <div class="container">
+                <h1>Знакомьтесь, GetGo</h1>
+                <p>Мы совершаем революцию в городской мобильности, делая каршеринг простым, доступным и устойчивым.</p>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5" style="margin: 0 auto 16px; display: block;">
+                            <path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        <h3>Наша миссия</h3>
+                        <p>Предоставить бесшовный, доступный и устойчивый опыт каршеринга, который позволяет людям свободно передвигаться по городу без бремени владения автомобилем.</p>
+                    </div>
+                    <div class="mission-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5" style="margin: 0 auto 16px; display: block;">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <path d="M12 22V12"/>
+                            <path d="M9 10.5l3-1.5 3 1.5"/>
+                        </svg>
+                        <h3>Наше видение</h3>
+                        <p>Стать ведущей платформой каршеринга в мире, сделав личное владение автомобилем устаревшим, предлагая лучшую, более умную альтернативу для городского транспорта.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Наши ценности</h2>
+                <p class="section-subtitle">Принципы, которые направляют всё, что мы делаем</p>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h4>Клиент прежде всего</h4>
+                        <p>Мы ставим клиентов в центр всего, что мы делаем.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                            </svg>
+                        </div>
+                        <h4>Инновации</h4>
+                        <p>Постоянно улучшаем наш сервис с помощью передовых технологий.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5">
+                                <path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/>
+                                <path d="M12 7v5l3 3"/>
+                            </svg>
+                        </div>
+                        <h4>Устойчивость</h4>
+                        <p>Стремимся сократить углеродный след через совместную мобильность.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h4>Доступность</h4>
+                        <p>Делаем каршеринг доступным для каждого, везде.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="milestones">
+            <div class="container">
+                <h2 class="section-title">Наши события</h2>
+                <p class="section-subtitle">Вехи, которые сформировали GetGo</p>
+                <div class="timeline">
+                    <div class="milestone">
+                        <div class="year">2020</div>
+                        <div class="title">Основание</div>
+                        <p>GetGo был основан в Сан-Франциско</p>
+                    </div>
+                    <div class="milestone">
+                        <div class="year">2021</div>
+                        <div class="title">Расширение</div>
+                        <p>Запуск в 10 крупных городах</p>
+                    </div>
+                    <div class="milestone">
+                        <div class="year">2023</div>
+                        <div class="title">50 000 пользователей</div>
+                        <p>Достигли 50 000 активных пользователей</p>
+                    </div>
+                    <div class="milestone">
+                        <div class="year">2026</div>
+                        <div class="title">100 городов</div>
+                        <p>Теперь доступны в 100+ городах</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Наша команда</h2>
+                <p class="section-subtitle">Люди, стоящие за GetGo</p>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5" style="margin: 0 auto 16px;">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <div class="team-name">Клочко Даниил</div>
+                        <div class="team-role">Руководитель отдела операций</div>
+                        <p>Эксперт в логистике</p>
+                    </div>
+                    <div class="team-card">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5" style="margin: 0 auto 16px;">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <div class="team-name">Кузыченко Артур</div>
+                        <div class="team-role">Генеральный директор и основатель</div>
+                        <p>Визионер городской мобильности</p>
+                    </div>
+                    <div class="team-card">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="1.5" style="margin: 0 auto 16px;">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <div class="team-name">Лесько Никита</div>
+                        <div class="team-role">Технический директор</div>
+                        <p>Лидер технологических инноваций</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <div class="footer-logo">GetGo</div>
+                <p>Современный каршеринг<br>для городской мобильности. Водите на своих условиях.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <strong>Навигация</strong>
+                    <a href="page2-about.html">О нас</a>
+                    <a href="page6-pricing.html">Тарифы</a>
+                    <a href="page3-fleet.html">Автопарк</a>
+                    <a href="page5-faq.html">Вопросы</a>
+                </div>
+                <div>
+                    <strong>Контакты</strong>
+                    <a href="#">+375 (29) 533-9559</a>
+                    <a href="#">kuzychenkoa@inbox.ru</a>
+                    <a href="#">город Минск,улица Бобруйская 25</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">© 2026 GetGo. Все права защищены.</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

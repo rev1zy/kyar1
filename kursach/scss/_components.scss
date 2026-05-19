@@ -1,0 +1,665 @@
+// ============================================
+// GETGO - COMPONENTS
+// ============================================
+
+// Buttons
+.btn-primary {
+    @include button-primary;
+}
+
+.btn-secondary {
+    @include button-secondary;
+}
+
+.btn-cta {
+    @include button-primary;
+    display: inline-block;
+}
+
+.btn-signup {
+    background: $primary-green;
+    color: $primary-black !important;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-full;
+    font-weight: $font-semibold;
+    
+    &:hover {
+        background: $primary-green-dark;
+    }
+}
+
+.btn-plan {
+    @include button-outline;
+}
+
+.btn-register {
+    width: 100%;
+    background: $primary-green;
+    color: $primary-black;
+    border: none;
+    padding: 14px;
+    border-radius: $radius-full;
+    font-weight: $font-bold;
+    font-size: $font-size-base;
+    cursor: pointer;
+    transition: $transition-fast;
+    margin-top: $spacing-md;
+    
+    &:hover {
+        background: $primary-green-dark;
+        transform: translateY(-2px);
+    }
+}
+
+.btn-order {
+    background: $primary-green;
+    color: $primary-black;
+    padding: 14px $spacing-xl;
+    border-radius: $radius-full;
+    font-weight: $font-bold;
+    font-size: $font-size-md;
+    border: none;
+    cursor: pointer;
+    transition: $transition-fast;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(204, 255, 0, 0.3);
+    }
+}
+
+.btn-book {
+    width: 100%;
+    background: $primary-green;
+    color: $primary-black;
+    border: none;
+    padding: $spacing-md;
+    border-radius: $radius-full;
+    font-weight: $font-bold;
+    font-size: $font-size-md;
+    cursor: pointer;
+    margin-top: $spacing-lg;
+    transition: $transition-fast;
+    
+    &:hover {
+        background: $primary-green-dark;
+        transform: translateY(-2px);
+    }
+}
+
+// Feature Card
+.feature-card {
+    @include card;
+    flex: 1;
+    min-width: 240px;
+    text-align: center;
+    padding: $spacing-lg $spacing-md;
+    
+    .feature-icon svg {
+        width: 48px;
+        height: 48px;
+        stroke: $primary-green;
+        stroke-width: 1.5;
+        fill: none;
+    }
+    
+    h3 {
+        font-size: $font-size-xl;
+        font-weight: $font-bold;
+        margin-bottom: $spacing-md;
+        color: $primary-black;
+    }
+    
+    p {
+        color: $gray-light;
+    }
+}
+
+// Review Card
+.review-card {
+    @include review-card;
+    
+    .review-header {
+        @include flex-between;
+        margin-bottom: $spacing-md;
+        
+        .review-name {
+            font-weight: $font-bold;
+            font-size: $font-size-md;
+            color: $primary-black;
+        }
+        
+        .review-date {
+            color: $gray-date;
+            font-size: $font-size-xs;
+        }
+    }
+    
+    .review-car {
+        color: $primary-green;
+        font-size: $font-size-sm;
+        margin-bottom: $spacing-sm;
+    }
+    
+    .review-stars svg {
+        fill: $primary-green;
+    }
+    
+    .review-text {
+        color: $gray-text;
+        line-height: $line-height-relaxed;
+        margin: $spacing-md 0;
+    }
+    
+    .helpful {
+        font-size: $font-size-xs;
+        color: $gray-date;
+        padding-top: $spacing-sm;
+        border-top: 1px solid $gray-border;
+    }
+}
+
+// Car Card
+.car-card {
+    @include car-card;
+    
+    .car-image {
+        height: 200px;
+        background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+        @include flex-center;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    .car-info {
+        padding: $spacing-lg;
+        
+        h3 {
+            font-size: $font-size-xl;
+            margin-bottom: $spacing-sm;
+            color: $primary-black;
+        }
+        
+        .car-specs {
+            display: flex;
+            gap: $spacing-md;
+            margin: $spacing-md 0;
+            color: $gray-light;
+            font-size: $font-size-sm;
+        }
+        
+        .car-price {
+            font-weight: $font-bold;
+            color: $primary-green;
+            font-size: $font-size-lg;
+        }
+    }
+}
+
+// Pricing Card
+.pricing-card {
+    background: $white;
+    border-radius: $radius-4xl;
+    padding: $spacing-lg;
+    width: 320px;
+    box-shadow: $shadow-2xl;
+    border: 1px solid $gray-border;
+    transition: $transition-fast;
+    position: relative;
+    
+    &:hover {
+        transform: translateY(-4px);
+        border-color: $primary-green;
+    }
+    
+    &.popular {
+        border: 2px solid $primary-green;
+        transform: scale(1.02);
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: $spacing-lg;
+            background: $primary-green;
+            color: $primary-black;
+            padding: 4px $spacing-md;
+            border-radius: $radius-full;
+            font-size: $font-size-xs;
+            font-weight: $font-bold;
+        }
+    }
+    
+    h3 {
+        font-size: $font-size-2xl;
+        margin-bottom: $spacing-md;
+        color: $primary-black;
+    }
+    
+    .price {
+        font-size: $font-size-6xl;
+        font-weight: $font-extrabold;
+        color: $primary-green;
+        margin: $spacing-md 0;
+        
+        span {
+            font-size: $font-size-base;
+            font-weight: $font-regular;
+            color: $gray-light;
+        }
+    }
+    
+    .features {
+        margin: $spacing-lg 0;
+        
+        li {
+            margin: $spacing-sm 0;
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+            color: $gray-text;
+            
+            svg {
+                stroke: $primary-green;
+            }
+        }
+    }
+}
+
+// FAQ Item
+.faq-item {
+    margin-bottom: $spacing-md;
+    border-bottom: 1px solid $gray-border;
+    padding-bottom: $spacing-md;
+    
+    .faq-question {
+        font-weight: $font-semibold;
+        cursor: pointer;
+        @include flex-between;
+        padding: $spacing-sm 0;
+        color: $primary-black;
+        
+        &:hover {
+            color: $primary-green;
+        }
+        
+        .toggle-icon svg {
+            stroke: $primary-green;
+        }
+    }
+    
+    .faq-answer {
+        color: $gray-text;
+        margin-top: $spacing-sm;
+        font-size: $font-size-sm;
+        line-height: $line-height-relaxed;
+        display: none;
+        padding-bottom: $spacing-sm;
+        
+        &.active {
+            display: block;
+        }
+    }
+}
+
+// FAQ Category
+.faq-category h4 {
+    font-size: $font-size-lg;
+    font-weight: $font-bold;
+    margin-bottom: $spacing-lg;
+    border-left: 4px solid $primary-green;
+    padding-left: $spacing-md;
+    color: $primary-black;
+}
+
+// FAQ Search
+.faq-search {
+    max-width: 500px;
+    margin: $spacing-lg auto;
+    
+    input {
+        width: 100%;
+        padding: $spacing-md $spacing-lg;
+        border-radius: $radius-round;
+        border: 1px solid $gray-border;
+        font-size: $font-size-base;
+        background: $white;
+        
+        &:focus {
+            outline: none;
+            border-color: $primary-green;
+            box-shadow: 0 0 0 3px rgba(204, 255, 0, 0.1);
+        }
+    }
+}
+
+// Badges
+.badge {
+    background: $gray-soft;
+    padding: 6px $spacing-md;
+    border-radius: $radius-round;
+    font-size: $font-size-sm;
+    border: 1px solid $gray-border;
+    color: $primary-black;
+}
+
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+    justify-content: center;
+    margin-top: $spacing-md;
+}
+
+// Team Card
+.team-card {
+    text-align: center;
+    padding: $spacing-lg;
+    background: $white;
+    border-radius: $radius-2xl;
+    border: 1px solid $gray-border;
+    
+    .team-name {
+        font-size: $font-size-lg;
+        font-weight: $font-bold;
+        margin-bottom: $spacing-sm;
+        color: $primary-black;
+    }
+    
+    .team-role {
+        color: $primary-green;
+        font-weight: $font-medium;
+    }
+    
+    p {
+        font-size: $font-size-sm;
+        color: $gray-light;
+    }
+}
+
+// Mission Card
+.mission-card {
+    background: $white;
+    padding: $spacing-lg;
+    border-radius: $radius-2xl;
+    text-align: center;
+    box-shadow: $shadow-md;
+    border: 1px solid $gray-border;
+    
+    h3 {
+        font-size: $font-size-2xl;
+        margin-bottom: $spacing-md;
+        color: $primary-green;
+    }
+    
+    p {
+        color: $gray-text;
+    }
+}
+
+// Value Item
+.value-item {
+    text-align: center;
+    padding: $spacing-lg;
+    background: $white;
+    border-radius: $radius-2xl;
+    border: 1px solid $gray-border;
+    transition: $transition-fast;
+    
+    &:hover {
+        border-color: $primary-green;
+    }
+    
+    .value-icon svg {
+        stroke: $primary-green;
+    }
+    
+    h4 {
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-sm;
+        color: $primary-black;
+    }
+    
+    p {
+        font-size: $font-size-sm;
+        color: $gray-light;
+    }
+}
+
+// Milestone
+.milestone {
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+    
+    .year {
+        font-size: $font-size-4xl;
+        font-weight: $font-extrabold;
+        color: $primary-green;
+    }
+    
+    .title {
+        font-weight: $font-bold;
+        margin: $spacing-sm 0;
+        color: $primary-black;
+    }
+    
+    p {
+        font-size: $font-size-sm;
+        color: $gray-light;
+    }
+}
+
+// Extra Card
+.extra-card {
+    background: $white;
+    border-radius: $radius-2xl;
+    padding: $spacing-lg;
+    text-align: center;
+    border: 1px solid $gray-border;
+    
+    h3 {
+        margin-bottom: $spacing-md;
+        color: $primary-black;
+        
+        svg {
+            stroke: $primary-green;
+        }
+    }
+    
+    p {
+        color: $gray-light;
+        margin-bottom: $spacing-lg;
+        font-size: $font-size-sm;
+    }
+}
+
+// Option Card
+.option-card {
+    background: $white;
+    border-radius: $radius-xl;
+    padding: $spacing-lg;
+    margin-bottom: $spacing-md;
+    @include flex-between;
+    transition: all 0.3s ease;
+    border: 1px solid $gray-border;
+    cursor: pointer;
+    
+    &:hover {
+        border-color: $primary-green;
+        transform: translateX(5px);
+    }
+    
+    &.selected {
+        border-color: $primary-green;
+        background: linear-gradient(135deg, #f8fff0 0%, $white 100%);
+        box-shadow: 0 4px 12px rgba(204, 255, 0, 0.2);
+        
+        .option-checkbox {
+            background: $primary-green;
+            
+            svg {
+                display: block;
+            }
+        }
+        
+        .option-icon {
+            background: $primary-green;
+        }
+    }
+    
+    .option-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .option-icon {
+        width: 48px;
+        height: 48px;
+        background: $gray-bg;
+        border-radius: 50%;
+        @include flex-center;
+        font-size: $font-size-2xl;
+        transition: $transition-fast;
+    }
+    
+    .option-name {
+        font-weight: $font-semibold;
+        color: $primary-black;
+    }
+    
+    .option-name + div {
+        font-size: $font-size-xs;
+        color: $gray-light-text;
+    }
+    
+    .option-price {
+        font-weight: $font-bold;
+        color: $primary-green;
+        font-size: $font-size-md;
+    }
+    
+    .option-checkbox {
+        width: 24px;
+        height: 24px;
+        border: 2px solid $primary-green;
+        border-radius: $radius-sm;
+        @include flex-center;
+        transition: $transition-fast;
+        background: $white;
+        
+        svg {
+            width: 16px;
+            height: 16px;
+            stroke: $primary-black;
+            display: none;
+        }
+    }
+}
+
+// Total Section
+.total-section {
+    background: linear-gradient(135deg, $primary-dark 0%, #1a1a1a 100%);
+    border-radius: $radius-2xl;
+    padding: $spacing-lg;
+    margin-top: 30px;
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+    
+    .total-label {
+        color: $white;
+        font-size: $font-size-md;
+    }
+    
+    .total-price {
+        font-size: 36px;
+        font-weight: $font-extrabold;
+        color: $primary-green;
+        
+        span {
+            font-size: $font-size-base;
+            font-weight: $font-regular;
+            color: #888;
+        }
+    }
+}
+
+// Included Item
+.included-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-md 0;
+    border-bottom: 1px solid #f0f0f0;
+    
+    svg {
+        width: 24px;
+        height: 24px;
+        stroke: $primary-green;
+        stroke-width: 2;
+    }
+    
+    span {
+        color: $gray-text;
+    }
+}
+
+// Price Update Animation
+.price-update {
+    animation: pulse 0.3s ease;
+}
+
+// Specs Section
+.specs-section {
+    margin: $spacing-lg 0;
+    padding: $spacing-md;
+    background: $gray-bg;
+    border-radius: $radius-xl;
+    
+    h3 {
+        font-size: $font-size-md;
+        margin-bottom: $spacing-md;
+        color: $primary-black;
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+    }
+    
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    li {
+        margin: $spacing-sm 0;
+        padding-left: $spacing-lg;
+        position: relative;
+        color: $gray-text;
+        
+        &:before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: $primary-green;
+            font-weight: bold;
+        }
+    }
+}
+
+.specs-badge {
+    display: inline-block;
+    background: $primary-green;
+    color: $primary-black;
+    padding: 4px $spacing-md;
+    border-radius: $radius-xl;
+    font-size: $font-size-xs;
+    font-weight: $font-semibold;
+    margin-right: $spacing-sm;
+    margin-bottom: $spacing-sm;
+}

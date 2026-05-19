@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+    <car id="1">
+        <name>Tesla Model 3</name>
+        <price>от 15 руб/час</price>
+        <image>img/tesla.jpg</image>
+        <type>Седан / Электро</type>
+        <specs>
+            <spec>⚡ Электромобиль</spec>
+            <spec>🔋 Запас хода: 358 миль</spec>
+            <spec>🚀 Разгон 0-100 км/ч: 3.3 сек</spec>
+            <spec>💨 Макс. скорость: 261 км/ч</spec>
+            <spec>🔌 Зарядка: 30 мин до 80%</spec>
+        </specs>
+        <features>
+            <feature>Автопилот</feature>
+            <feature>Панорамная крыша</feature>
+            <feature>Подогрев всех сидений</feature>
+            <feature>Премиум аудио</feature>
+        </features>
+    </car>
+    <car id="2">
+        <name>Honda CR-V</name>
+        <price>от 12 руб/час</price>
+        <image>img/honda.jpg</image>
+        <type>Кроссовер / Гибрид</type>
+        <specs>
+            <spec>⛽ Гибрид</spec>
+            <spec>📊 Расход: 5.5 л/100км</spec>
+            <spec>👨‍👩‍👧‍👦 5 мест</spec>
+            <spec>🏔 Полный привод</spec>
+            <spec>🗜 Объем багажника: 1110 л</spec>
+        </specs>
+        <features>
+            <feature>Адаптивный круиз-контроль</feature>
+            <feature>Камера 360°</feature>
+            <feature>Подогрев руля</feature>
+            <feature>Беспроводная зарядка</feature>
+            <feature>Apple CarPlay</feature>
+        </features>
+    </car>
+    <car id="3">
+        <name>BMW 3 Series</name>
+        <price>от 22 руб/час</price>
+        <image>img/bmw3.jpg</image>
+        <type>Седан / Премиум</type>
+        <specs>
+            <spec>⚠️ Бензин</spec>
+            <spec>💪 258 л.с.</spec>
+            <spec>⚡ Задний привод</spec>
+            <spec>⏱ Разгон до 100: 5.8 сек</spec>
+            <spec>🛞 R18 диски</spec>
+        </specs>
+        <features>
+            <feature>Кожаный салон</feature>
+            <feature>Проекционный дисплей</feature>
+            <feature>Подогрев руля</feature>
+            <feature>Адаптивная подвеска</feature>
+            <feature>Harman Kardon</feature>
+        </features>
+    </car>
+    <car id="4">
+        <name>Toyota Camry</name>
+        <price>от 10 руб/час</price>
+        <image>img/toyota.webp</image>
+        <type>Седан / Комфорт</type>
+        <specs>
+            <spec>⛽ Бензин</spec>
+            <spec>💪 200 л.с.</spec>
+            <spec>📊 Расход: 7 л/100км</spec>
+            <spec>👨‍👩‍👧‍👦 5 мест</spec>
+            <spec>🛞 R17 диски</spec>
+        </specs>
+        <features>
+            <feature>Адаптивный круиз</feature>
+            <feature>Подогрев всех сидений</feature>
+            <feature>Люк</feature>
+            <feature>Камера заднего вида</feature>
+            <feature>Датчики парковки</feature>
+        </features>
+    </car>
+    <car id="5">
+        <name>Honda Civic</name>
+        <price>от 9 руб/час</price>
+        <image>img/OIP.webp</image>
+        <type>Хэтчбек / Эконом</type>
+        <specs>
+            <spec>📐 Компактный</spec>
+            <spec>💪 150 л.с.</spec>
+            <spec>📊 Расход: 6.5 л/100км</spec>
+            <spec>👨‍👩‍👧 5 мест</spec>
+            <spec>🎮 Sport режим</spec>
+        </specs>
+        <features>
+            <feature>Apple CarPlay</feature>
+            <feature>Камера заднего вида</feature>
+            <feature>Экономичный расход</feature>
+            <feature>Датчики дождя</feature>
+            <feature>Климат-контроль</feature>
+        </features>
+    </car>
+    <car id="6">
+        <name>Nissan Leaf</name>
+        <price>от 11 руб/час</price>
+        <image>img/nissan.webp</image>
+        <type>Хэтчбек / Электро</type>
+        <specs>
+            <spec>⚡ Электромобиль</spec>
+            <spec>🔋 Запас хода: 240 км</spec>
+            <spec>⚡ e-Pedal режим</spec>
+            <spec>🔌 Быстрая зарядка</spec>
+            <spec>♻️ 0 выбросов</spec>
+        </specs>
+        <features>
+            <feature>Eco режим</feature>
+            <feature>Быстрая зарядка CHAdeMO</feature>
+            <feature>Рекуперация энергии</feature>
+            <feature>Медиасистема NissanConnect</feature>
+            <feature>Подогрев сидений</feature>
+        </features>
+    </car>
+    <car id="7">
+        <name>Mini Cooper</name>
+        <price>от 14 руб/час</price>
+        <image>img/img1.jpg</image>
+        <type>Хэтчбек / Премиум</type>
+        <specs>
+            <spec>🎨 Компактный премиум</spec>
+            <spec>💪 136 л.с.</spec>
+            <spec>🚗 Передний привод</spec>
+            <spec>📊 Расход: 6 л/100км</spec>
+            <spec>🎛 Спортивный режим</spec>
+        </specs>
+        <features>
+            <feature>Стильный дизайн</feature>
+            <feature>Панорамная крыша</feature>
+            <feature>Медиасистема</feature>
+            <feature>Атмосферная подсветка</feature>
+            <feature>Кожаный руль</feature>
+        </features>
+    </car>
+    <car id="8">
+        <name>Toyota RAV4</name>
+        <price>от 13 руб/час</price>
+        <image>img/toyotarav.jpg</image>
+        <type>Внедорожник / Гибрид</type>
+        <specs>
+            <spec>🏔 Внедорожник</spec>
+            <spec>⛽ Гибрид</spec>
+            <spec>🔀 Полный привод</spec>
+            <spec>👨‍👩‍👧‍👦 5 мест</spec>
+            <spec>🗜 Объем багажника: 580 л</spec>
+        </specs>
+        <features>
+            <feature>Система удержания полосы</feature>
+            <feature>Круиз-контроль</feature>
+            <feature>Большой багажник</feature>
+            <feature>Камера заднего вида</feature>
+            <feature>Бесключевой доступ</feature>
+        </features>
+    </car>
+</cars>
